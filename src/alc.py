@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import os
 import logging
 import tinytuya
