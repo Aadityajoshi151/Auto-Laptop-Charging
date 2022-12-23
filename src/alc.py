@@ -15,7 +15,7 @@ def toggleStatus(state, logtext, battery_percent):
         response = ttobj.turn_on()
     else:
         response = ttobj.turn_off()
-    if ENABLE_LOGGING:
+    if LOGGING_ENABLED:
         dtobj = datetime.now()
         if "Network Error: Device Unreachable" in response.values():
             logging.info(f"[{dtobj.strftime('%d %b %Y - %I:%M:%S %p')}] Smart plug not reachable.")
@@ -34,7 +34,7 @@ def checkBatteryStatus():
 
 BATTERY_LOW_THRESHOLD=20
 BATTERY_HIGH_THRESHOLD=80
-ENABLE_LOGGING=True
+LOGGING_ENABLED=True
 
 logging.basicConfig(filename='auto_laptop_charging_logs.log', filemode='a', format='%(message)s', level=logging.INFO)
 
