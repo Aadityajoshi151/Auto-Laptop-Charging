@@ -45,7 +45,8 @@ device_id = os.getenv("DEVICE_ID")
 device_ip_address = os.getenv("DEVICE_IP_ADDRESS")
 local_key = os.getenv("LOCAL_KEY")
 
-schedule.every(5).minutes.do(checkBatteryStatus)
+checkBatteryStatus()
+schedule.every(7).minutes.do(checkBatteryStatus)
 
 def main():   
     while(True):
