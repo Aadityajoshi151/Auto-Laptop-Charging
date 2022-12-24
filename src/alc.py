@@ -36,6 +36,7 @@ def checkBatteryStatus():
 BATTERY_LOW_THRESHOLD=20
 BATTERY_HIGH_THRESHOLD=80
 LOGGING_ENABLED=True
+DURATION=7
 
 logging.basicConfig(filename='auto_laptop_charging_logs.log', filemode='a', format='%(message)s', level=logging.INFO)
 
@@ -46,7 +47,7 @@ device_ip_address = os.getenv("DEVICE_IP_ADDRESS")
 local_key = os.getenv("LOCAL_KEY")
 
 checkBatteryStatus()
-schedule.every(7).minutes.do(checkBatteryStatus)
+schedule.every(DURATION).minutes.do(checkBatteryStatus)
 
 def main():   
     while(True):
