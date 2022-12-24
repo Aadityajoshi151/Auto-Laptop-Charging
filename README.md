@@ -1,11 +1,11 @@
 ## Auto Laptop Charging
 
-A simple script which helps to control [Wipro 10A smart plug](https://www.amazon.in/Wipro-monitoring-appliances-Assistant-DSP1100/dp/B08HNB2FSH/ref=sr_1_6?crid=261O3HO8PB294&keywords=smart%2Bplug&qid=1671857877&sprefix=smart%2Bplug%2Caps%2C269&sr=8-6&th=1) via python.
+A simple script which helps to control [Wipro 10A smart plug](https://www.amazon.in/Wipro-monitoring-appliances-Assistant-DSP1100/dp/B08HNB2FSH/ref=sr_1_6?crid=261O3HO8PB294&keywords=smart%2Bplug&qid=1671857877&sprefix=smart%2Bplug%2Caps%2C269&sr=8-6&th=1) and similar plugs/devices via python.
 This script is written to start laptop charging (turn plug on) if battery percent is below certain level and stop charging (turn plug off) once it is above certain percent.
 It runs continuously in the background checking the battery percentage every 7 minutes (duration can be changed).
 
 ## Usage
-- Assuming you have a smart plug compatible with [tinytuya](https://github.com/jasonacox/tinytuya), connect it to your Wifi network to get its IP address. Assign a static IP address to the plug so that it never changes on your network.
+- Assuming you have a smart plug that is compatible with [tinytuya](https://github.com/jasonacox/tinytuya), connect it to your Wifi network to get its IP address. Assign a static IP address to the plug so that it never changes on your network.
 
 - Follow the [steps](https://github.com/jasonacox/tinytuya#setup-wizard---getting-local-keys) mentioned on tinytuya's page to get the local keys. Upon sucessful completion of steps you would have `device id` and `local key`.
 
