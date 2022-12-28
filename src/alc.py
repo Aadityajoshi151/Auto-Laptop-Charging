@@ -19,7 +19,7 @@ def toggleStatus(state, logtext, battery_percent):
     if LOGGING_ENABLED:
         dtobj = datetime.now()
         if "Network Error: Device Unreachable" in response.values():
-            logging.info(f"[{dtobj.strftime('%d %b %Y - %I:%M:%S %p')}] Smart plug not reachable.")
+            logging.info(f"[{dtobj.strftime('%d %b %Y - %I:%M:%S %p')}] Smart plug not reachable. Battery at {battery_percent}%")
         else:
             logging.info(f"[{dtobj.strftime('%d %b %Y - %I:%M:%S %p')}] Charging {logtext} at {battery_percent}% battery.")
 
